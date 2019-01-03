@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+sum_col() {
+	declare -i col=${1:?Usage: sum_col <column_number>}
+	let col--
+	shift
+	perl -s -wnla -e "{ \$sum += \$F[$col]; } END { print \$sum }" "$@"
+}
+
+avg_col() {
+	declare -i col=${1:?Usage: avg_col <column_number>}
+	let col--
+	shift
+	perl -s -wnla -e "{ \$sum += \$F[$col]; \$cnt += 1; } END { print \$sum / \$cnt }" "$@"
+}
+
+die() {
+  echo "$@" >&2
+  return 1
+}

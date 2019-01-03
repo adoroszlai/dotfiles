@@ -1,0 +1,5 @@
+[alias]
+	st = status
+	whatadded = log --diff-filter=A
+[core]
+	excludesfile = ~/.gitignore_global
