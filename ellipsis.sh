@@ -1,24 +1,29 @@
 #!/usr/bin/env bash
-#
-# adoroszlai/dotfiles ellipsis package
 
-# The following hooks can be defined to customize behavior of your package:
-# pkg.install() {
-#     fs.link_files $PKG_PATH
-# }
+path.in_pkg() {
+    echo "$PKG_PATH/$(path.strip_dot "$(basename "$1")")"
+}
 
-# pkg.push() {
-#     git.push
-# }
+path.relative_to_package() {
+    echo "${1/${PKG_PATH}\//}"
+}
 
-# pkg.pull() {
-#     git.pull
-# }
+git.add() {
+    git --git-dir=${PKG_PATH}/.git add "$(path.relative_to_package "$1")"
+}
 
-# pkg.installed() {
-#     git.status
-# }
-#
-# pkg.status() {
-#     git.diffstat
-# }
+git.remove() {
+    git --git-dir=${PKG_PATH}/.git rm "$(path.relative_to_package "$1")"
+}
+
+pkg.add() {
+    hooks.add "$1"
+    git.add "$(path.in_pkg "$1")"
+}
+
+pkg.remove() {
+    git.remove "$(path.in_pkg "$1")"
+    hooks.remove "$1"
+}
+
+# vim: et ts=4 sts=4 sw=4
