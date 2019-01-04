@@ -23,6 +23,7 @@ export PATH=~/bin:$PATH:~/.ellipsis/bin
 
 alias abgen='type make >/dev/null && make -f ~/.zsh_plugins.make' # antibody bundle
 alias bc='bc -lq'
+alias e='ellipsis'
 alias grevne='git revert --no-edit'
 alias grevnc='git revert --no-commit'
 alias gsff='git show --format=fuller --show-signature'
