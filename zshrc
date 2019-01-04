@@ -59,4 +59,6 @@ source_safe ~/.zsh_plugins.zsh
 
 bindkey ' ' magic-space
 
-type direnv >/dev/null && eval "$(direnv hook zsh)"
+if type direnv >/dev/null; then
+  eval "$(direnv hook zsh)"
+fi
