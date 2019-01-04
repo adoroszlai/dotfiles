@@ -1,7 +1,7 @@
 export GOPATH="$HOME/go"
 export ISSUES_DIR=~/src/tasks
 export JENKINS_LOGS_DIR=~/doc/builds.apache.org/job
-export JENKINS_JOBS=(Ambari-branch-2.6 Ambari-branch-2.7 Ambari-trunk-Commit Ambari-Github-PullRequest-Builder)
+JENKINS_JOBS=(Ambari-branch-2.6 Ambari-branch-2.7 Ambari-trunk-Commit Ambari-Github-PullRequest-Builder)
 export REPO_HOST=repo
 export TERM="xterm-256color"
 export UAZ_PATH=~/src/uaz
