@@ -1,3 +1,4 @@
+export ELLIPSIS_PATH=~/.ellipsis
 export GOPATH="$HOME/go"
 export ISSUES_DIR=~/src/tasks
 export JENKINS_LOGS_DIR=~/doc/builds.apache.org/job
@@ -15,7 +16,7 @@ export AMBARI_PROJECT=~/src/ambari
 export JENKINS_URL="https://builds.apache.org"
 export JIRA_URL="https://issues.apache.org/jira"
 
-export PATH=~/bin:$PATH:~/.ellipsis/bin
+export PATH=~/bin:$PATH:${ELLIPSIS_PATH}/bin
 
 [[ -d ${GOPATH} ]] && export PATH="${PATH}:${GOPATH}/bin"
 
@@ -33,6 +34,8 @@ alias R='R --quiet'
 alias t='todo.sh'
 
 umask 077
+
+fpath+=(${ELLIPSIS_PATH}/comp)
 
 autoload -U compinit
 compinit
