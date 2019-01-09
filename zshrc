@@ -1,5 +1,6 @@
 export ELLIPSIS_PATH=~/.ellipsis
 export GOPATH="$HOME/go"
+export HISTFILE=~/.zsh_history
 export ISSUES_DIR=~/src/tasks
 export JENKINS_LOGS_DIR=~/doc/builds.apache.org/job
 JENKINS_JOBS=(Ambari-branch-2.6 Ambari-branch-2.7 Ambari-trunk-Commit Ambari-Github-PullRequest-Builder)
