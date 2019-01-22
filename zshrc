@@ -1,12 +1,19 @@
 export ELLIPSIS_PATH=~/.ellipsis
 export GOPATH="$HOME/go"
 export HISTFILE=~/.zsh_history
+export HISTSIZE=10000
+export SAVEHIST=${HISTSIZE}
 export ISSUES_DIR=~/src/tasks
 export JENKINS_LOGS_DIR=~/doc/builds.apache.org/job
 JENKINS_JOBS=(Ambari-branch-2.6 Ambari-branch-2.7 Ambari-trunk-Commit Ambari-Github-PullRequest-Builder)
 export REPO_HOST=repo
 export TERM="xterm-256color"
 export UAZ_PATH=~/src/uaz
+
+setopt HIST_IGNORE_DUPS
+setopt HIST_REDUCE_BLANKS
+setopt INC_APPEND_HISTORY
+setopt SHARE_HISTORY
 
 # Ambari
 export APACHE_AMBARI_UTILS_PATH=~/src/apache-ambari-utils
