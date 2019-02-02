@@ -30,7 +30,7 @@ export PATH=~/bin:$PATH:${ELLIPSIS_PATH}/bin
 
 [[ -f /usr/local/bin/lesspipe.sh ]] && export LESSOPEN="|/usr/local/bin/lesspipe.sh %s" LESS_ADVANCED_PREPROCESSOR=1
 
-alias abgen='type make >/dev/null && make -f ~/.zsh_plugins.make' # antibody bundle
+alias abgen='type make >/dev/null && make -f ~/.zsh_plugins.make .zsh_plugins.zsh' # antibody bundle
 alias bc='bc -lq'
 alias e='ellipsis'
 alias grevne='git revert --no-edit'
