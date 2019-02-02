@@ -39,8 +39,6 @@ alias gsff='git show --format=fuller --show-signature'
 alias mvim='mvim -p'
 alias pygrep="grep --include '*.py'"
 alias R='R --quiet'
-alias t='todo.sh'
-alias tc='cd ${TODO_DIR}'
 
 umask 077
 
