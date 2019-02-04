@@ -3,3 +3,5 @@
 	whatadded = log --diff-filter=A
 [core]
 	excludesfile = ~/.gitignore_global
+[hub]
+	protocol = ssh
