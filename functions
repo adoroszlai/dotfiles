@@ -18,3 +18,20 @@ die() {
   echo "$@" >&2
   return 1
 }
+
+svn_add() {
+	[ -n "$1" ] || return 1
+	svn st | grep "^?.*$1$" | awk '{ print $2 }' | xargs svn add
+}
+
+svncdiff() {
+	svn diff "$@" | expand -t2 | colordiff 2> /dev/null | LESSCHARSET=iso8859 ${PAGER:-less} -r
+}
+
+last_month() {
+	if [[ $(uname) == "Darwin" ]]; then
+		date -v-1m '+%Y%m'
+	else
+		date -d 'last month' '+%Y%m'
+	fi
+}
