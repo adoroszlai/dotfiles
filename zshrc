@@ -1,3 +1,4 @@
+export CLICOLOR=1
 export ELLIPSIS_PATH=~/.ellipsis
 export GOPATH="$HOME/go"
 export HISTFILE=~/.zsh_history
