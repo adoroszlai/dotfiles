@@ -56,6 +56,8 @@ source_safe ~/.travis/travis.sh # travis gem
 
 source_safe ~/.functions
 source_safe ~/.ambari_functions
+source_safe ~/.cloudbreak.zsh
+source_safe ~/.hadoop.zsh
 
 if source_safe ${UAZ_PATH}/source_all; then
   source-all ${UAZ_PATH}
