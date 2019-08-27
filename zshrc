@@ -7,6 +7,7 @@ export SAVEHIST=${HISTSIZE}
 export ISSUES_DIR=~/src/tasks
 export JENKINS_LOGS_DIR=~/doc/builds.apache.org/job
 JENKINS_JOBS=(Ambari-branch-2.6 Ambari-branch-2.7 Ambari-trunk-Commit Ambari-Github-PullRequest-Builder)
+export MAVEN_OPTS="-Xmx4096m -Djava.awt.headless=true -Dorg.slf4j.simpleLogger.showDateTime=true -Dorg.slf4j.simpleLogger.dateTimeFormat=HH:mm:ss,SSS"
 export REPO_HOST=repo
 export TERM="xterm-256color"
 export UAZ_PATH=~/src/uaz
