@@ -1,1 +1,1 @@
-alias opack='mvn -Phdds -DskipTests -Dmaven.javadoc.skip=true -Pdist -Dtar -DskipShade -am -pl :hadoop-ozone-dist clean package'
+alias opack='mvn -Phdds -DskipTests -DskipShade -Dskip.installyarn -Dskip.yarn -am -pl :hadoop-ozone-dist clean package'
