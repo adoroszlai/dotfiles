@@ -5,3 +5,5 @@
 	excludesfile = ~/.gitignore_global
 [hub]
 	protocol = ssh
+[pull]
+	ff = only
